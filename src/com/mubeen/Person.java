@@ -22,6 +22,67 @@ public class Person {
         this.nationality = person.nationality;
         this.dateOfBirth = person.dateOfBirth;
         this.seatNumber = person.seatNumber;
+        this.passport = new String[3];
+    }
+
+    /********   Setters  ***********/
+    public void setSeatNumber(int seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPassport(){
+        this.passport = new String[]{this.name,this.nationality,this.dateOfBirth};
+    }
+
+
+    /********   Getters  ***********/
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getSeatNumber() {
+        return this.seatNumber;
+    }
+    public String getNationality(){
+        return this.nationality;
+    }
+
+    public String getDateOfBirth() {
+        return this.dateOfBirth;
+    }
+
+    public String[] getPassport() {
+        return Arrays.copyOf(this.passport,this.passport.length);
+    }
+
+    /************** Functionalities ********************/
+
+    public void chooseSeat(){
+        this.seatNumber = (int) (Math.random()*11 +1);
+    }
+
+    public boolean applyPassport(){
+
+        int choice = (int)(Math.random()*2);
+        if(choice==0){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 
     public  String toString(){

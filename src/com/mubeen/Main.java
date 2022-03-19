@@ -17,6 +17,6 @@ public class Main {
 
         Person person  = new Person("Mubeen","Indian","21092000",1);
 
-        System.out.println(person);
+
     }
 }
