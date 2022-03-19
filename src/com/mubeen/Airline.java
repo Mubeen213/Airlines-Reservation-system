@@ -31,4 +31,19 @@ public class Airline {
                 + person.getSeatNumber());
     }
 
+    public String toString(){
+        String temp = "";
+        for (int index = 0; index <this.seats.length ; index++) {
+
+            if(this.seats[index] == null){
+                temp += "Seat : " + (index+1) + " is empty \n";
+            }
+            else{
+               temp += seats[index].toString();
+               temp += "\n";
+            }
+        }
+        return temp;
+    }
+
 }

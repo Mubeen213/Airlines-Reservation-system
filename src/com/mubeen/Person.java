@@ -22,7 +22,7 @@ public class Person {
         this.nationality = person.nationality;
         this.dateOfBirth = person.dateOfBirth;
         this.seatNumber = person.seatNumber;
-        this.passport = new String[3];
+        this.passport = Arrays.copyOf(person.passport,person.passport.length);
     }
 
     /********   Setters  ***********/
@@ -56,6 +56,7 @@ public class Person {
     public int getSeatNumber() {
         return this.seatNumber;
     }
+
     public String getNationality(){
         return this.nationality;
     }
